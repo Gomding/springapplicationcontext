@@ -10,8 +10,8 @@ import java.util.Arrays;
 public class DemoApplication {
 
     public static void main(String[] args) {
-        ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfig.class); // 이 클래스를 빈 설정으로 함
-        //ApplicationContext context = new ClassPathXmlApplicationContext("application.xml");
+        ApplicationContext context = new AnnotationConfigApplicationContext(ApplicationConfig.class); // Java 설정 파일 사용
+        //ApplicationContext context = new ClassPathXmlApplicationContext("application.xml");   // xml 사용
 
         String[] beanDefinitionNames = context.getBeanDefinitionNames();
         System.out.println(Arrays.toString(beanDefinitionNames));
